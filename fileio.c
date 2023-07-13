@@ -29,6 +29,7 @@ void salvar_dados(struct agenda *agenda)
 {
 	FILE *out = fopen("banco-de-dados.txt", "w");
 	listWrite(agenda, out);
+	fclose(out);
 }
 
 void adicionar_de_arquivo(char *caminho)
